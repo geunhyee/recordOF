@@ -76,3 +76,13 @@
 💯
 ☕
 ``` : -> 키워드 - >  이모지```
+
+14. 뱃지 추가
+[배지 달기 (언어, 기술, 개발 도구, 자격)_](https://simpleicons.org)
+``` 배지 샘플 < img src="https://img.shields.io/bedge/JAVA-007396?style=flat&logo=Java&logoColor=white" /> ```
+
+
+<img src="https://img.shields.io/badge/JAVA-007396?style=flat&logo=Java&logoColor=white" />
+
+<img src="https://img.shields.io/badge/javascript-F7DF1E?style=flat&logo=javascript&logoColor=F7DF1E" />
+- style 배지모양(plastic, flat, flat_square, for-the-badge, social), logo 정식모양 사이트참조, logoColor 컬
