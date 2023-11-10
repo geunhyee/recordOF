@@ -1,0 +1,79 @@
+#Spring 혼자 공부한 것 
+
+new -> spring legacy prject -> 서버체크 -> 실행 -> home wordl! 
+-> pom.xml
+pom.xml
+의존성관리, 라이브러리 라던지.. 
+
+mybatis -> mapper -> xml
+db 쿼리
+sql 매핑
+동적 sql
+
+web.xml -> servlet-context ->root-context
+	    css 관련 mapping  db접속 url
+
+다음
+
+DAO 생성 (interface)/데이터베이스와의 통신을 처리
+mapper
+데이터베이스와 연결 및 데이터베이스 엑세스를 전담하는 클래스
+데이터베이스로부터 데이터를 가져오고 저장하는역할
+
+vo 생성
+데이터의 구조를 나타내는 객체 
+
+private(접근권한)
+빈 생성자
+getter (해당 필드의 값을 읽어오는 여ㅕㄱ할 / return으로 반환)
+setter (필드 값을 변경하는데 사용 / 만약 getter만 생성하고 setter를 생성 안할 경우 읽기만 가능함/thish)
+
+다음
+
+service 생성
+@Autowired dao; 
+dao의존성주입
+ex)board라면 board에 어떤 기능을 구현할 건지
+Exception도 생각하기
+
+다음
+controller생성
+Service 의존성 주입
+url mapping
+요청처리
+모델ㄷㅔ이터
+requestmapping
+postmapping
+responsebody
+
+
+
+
+
+-----------------------------------------------------------
+*log4j 파일은 로그 기록
+
+*Controller에서는 사용자의 입력처리와 응답에만 집중하고, Service에서는 실제 기능을 어떤식으로 제공하는지에 대해서만 집중하여야 나중에 다른 팀원이 코드를 수정할 때도 어떤 기능이 어디에 있는지 쉽게 알 수 있고, 변경하기 유리합니다. 
+
+*board.xml or member.xml이 오라클 디비 쿼리
+
+
+*Service(인터페이스)
+Serviceimpl 
+둘다 작성해야하고 
+Serviceimpl에는 코드를 작성하고
+Service(인터페이스)에는 작성해놔야함
+ex)
+Serviceimpl 
+public void freeWrite(FreeBoardVO freeboard) throws Exception {
+		int result = dao.freeWrite(freeboard);
+		if(result ==0) {
+			throw new Exception();
+			
+		}
+		
+	}
+이렇게 썼다면
+Service(인터페이스)에는
+public void freeWrite(FreeBoardVO freeboard) throws Exception;
+라고 해줘야함
