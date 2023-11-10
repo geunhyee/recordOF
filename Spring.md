@@ -1,5 +1,5 @@
-Spring 혼자 공부한 것 
-=======================
+# Spring 혼자 공부한 것 
+
 
 1. **프로젝트 생성**
    - `new -> spring legacy project -> 서버체크 -> 실행 -> home world!`
